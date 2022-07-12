@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Khoản</title>
+    <link rel="stylesheet" href="css/taikhoan.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-box" onclick="login()">Đăng Nhập</button>
+                <button type="button" class="toggle-box" onclick="register()">Đăng Ký</button>
+            </div>
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-google-plus-square"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+            <form id="login" action="" class="input-group">
+                <input type="text" class="input-field" placeholder="Tài Khoản">
+                <input type="password" class="input-field" placeholder="Mật Khẩu">
+                <input type="checkbox" class="check-box"> <span>Nhớ Mật Khẩu</span>
+                <button type="submit" class="submit-btn">Đăng Nhập</button>
+                <a href="#">Quên Mật Khẩu?</a>
+            </form>
+            <form id="register" action="" class="input-group">
+                <input type="text" class="input-field" placeholder="Tên Tài Khoản">
+                <input type="text" class="input-field" placeholder="Mật Khẩu">
+                <input type="email" class="input-field" placeholder="Email">
+                <input type="text" class="input-field" placeholder="Nhập Lại Mật Khẩu">
+                <input type="checkbox" class="check-box"> <span>Tôi đồng ý điều khoản và điều kiện</span>
+                <button type="submit" class="submit-btn">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "120px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>

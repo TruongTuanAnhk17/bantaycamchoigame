@@ -1,0 +1,119 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/background-2.jpg);
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box {
+    width: 380px;
+    height: 480px;
+    background: #fff;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 20%), 0 10px 10px rgb(0 0 0 / 20%);
+    position: relative;
+    margin-top: 6%;
+    margin-left: 10%;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box {
+    width: 230px;
+    margin: 35px auto;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+    border-radius: 30px;
+    position: relative;
+}
+
+.button-box button {
+    padding: 10px 25px;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+#btn {
+    position: absolute;
+    background: #5680E9;
+    width: 110px;
+    height: 100%;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.icons {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.icons i {
+    font-size: 30px;
+    color: #5680E9;
+    margin: 0px 12px;
+    box-shadow: 0 0 20px 0px #7f7f7f3d;
+}
+
+.input-group {
+    width: 280px;
+    margin: 0px auto;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.input-group a {
+    width: 45%;
+    position: relative;
+    top: 17px;
+    left: 86px;
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 15px;
+}
+
+.input-group a:hover {
+    border-bottom: 1px solid #1877f2;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: transparent;
+    outline: none;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    display: block;
+    margin: auto;
+    border: none;
+    background: #5680E9;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}

@@ -1,0 +1,398 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: black;
+    display: flex;
+}
+
+.header_logo {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+.header_logo img {
+    width: 155px;
+    height: 84px;
+}
+
+.header_search {
+    width: 45%;
+    height: 100%;
+    line-height: 100px;
+    padding-left: 30px;
+}
+
+.header_search input {
+    width: 90%;
+    height: 45px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding-left: 15px;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.header_account {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_account a {
+    color: white;
+    text-decoration: none;
+}
+
+.header_account i {
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.header_account span {
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.header_account span:hover {
+    color: #ffba00;
+}
+
+
+/* Phần Menu */
+
+.menu {
+    z-index: 1;
+    background: #1d2127;
+    padding-left: 100px;
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    top: 0px;
+    border-bottom: 1px solid #555;
+}
+
+.menu ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+    line-height: 70px;
+}
+
+.active {
+    width: 170px;
+    text-align: center;
+}
+
+.active:hover {
+    background: #5680E9;
+}
+
+.menu .thanhcongcu {
+    font-size: 24px;
+    width: 40px;
+    line-height: 70px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu .thanhcongcu:hover {
+    background-color: gray;
+}
+
+.menu-con {
+    position: absolute;
+    left: 100px;
+    z-index: 1;
+    width: 1030px;
+    background: #474747;
+    display: none;
+}
+
+#cham:hover .menu-con {
+    display: block;
+}
+
+.menu-con .menu-sp li {
+    float: left;
+    width: 230px;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.menu-con .menu-sp li a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+}
+
+.menu-con .menu-sp .sub-menu li {
+    float: none;
+    margin-left: -25px;
+    margin-top: -20px;
+    text-align: left;
+}
+
+.menu-con .menu-sp .sub-menu a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.menu-con .sub-menu a:hover {
+    border-bottom: 1px solid white;
+}
+
+
+/* Phần Tất cả Sản Phẩm */
+
+.title {
+    width: 100%;
+    padding: 20px 100px;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    font-size: 17px;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+    padding: 30px 100px;
+}
+
+.product_list {
+    width: 25%;
+    height: 100%;
+}
+
+.product_list-title {
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 26px;
+}
+
+.product_list-category {
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.product_list-category i {
+    color: #777;
+    float: right;
+}
+
+.product_list-price {
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.product_list-price input {
+    cursor: pointer;
+}
+
+.product_category {
+    width: 75%;
+    height: 100%;
+    padding-left: 20px;
+}
+
+.product_category-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_category-cols img {
+    width: 100%;
+    height: 180px;
+}
+
+.product_category-cols {
+    border: 0.5px solid #999;
+    flex-basis: 23%;
+    margin-right: 2%;
+    min-width: 190px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.product_category-cols #name {
+    font-weight: normal;
+    color: black;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.product_category-cols .rating {
+    color: red;
+    padding-left: 5px;
+}
+
+.product_category-cols #gia {
+    color: black;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.product_category-cols .gio {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.product_category-cols .gio button {
+    padding: 8px;
+    background: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product_category-cols .gio button:hover {
+    background: #333;
+}
+
+.page-btn {
+    width: 100%;
+    text-align: right;
+    padding-right: 118px;
+    margin-top: 10px;
+}
+
+.page-btn span {
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    background: #f2f2f2;
+}
+
+.page-btn span:hover {
+    background: black;
+    color: white;
+}
+
+
+/* Phần cuối */
+
+.fotter {
+    width: 100%;
+    background: #212529;
+    margin-top: 80px;
+}
+
+.row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.fotter .row .cols {
+    flex-basis: 30%;
+    min-width: 300px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.contact {
+    width: 100%;
+    height: 40px;
+    background: black;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+
+.fotter .cols ul li {
+    color: #777;
+    list-style: none;
+}
+
+.cols .cols_1 ul li {
+    padding: 20px 20px;
+    font-size: 20px;
+}
+
+.cols .cols_2 ul li {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.cols .cols_2 ul li:hover {
+    color: white;
+}
+
+.cols .cols_3 ul li {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.cols .cols_3 ul li:hover {
+    color: white;
+}
+
+
+/* Thanh Toan */
+
+.card {
+    background: #1d2127;
+    height: 80px;
+    line-height: 90px;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .header_logo {
+        width: 100%;
+    }
+    .header_search {
+        width: 100%;
+    }
+    .header_account {
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+    .menu ul li {
+        display: none;
+    }
+    .menu .thanhcongcu {
+        display: block;
+        margin-left: -90px;
+    }
+}

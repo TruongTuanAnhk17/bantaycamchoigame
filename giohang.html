@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/giohang.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/giohang.js"></script>
+    <title>Gio Hang</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="header_search">
+            <input type="text" placeholder="Tìm Kiếm....">
+        </div>
+        <div class="header_account">
+            <div>
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <a href="taikhoan.html"><span>Tài Khoản</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="thanhcongcu">
+            <i onclick="myFunction()" class="fa fa-bars" style="color:white;"></i>
+        </div>
+        <ul>
+            <li class="active"><a href="index.html"><b><i class="fa fa-home"></i>Trang chủ</b></a></li>
+            <li class="active" id="cham"><a href="#"><b><i class="fas fa-boxes"></i> Danh mục <i
+                            class="fas fa-angle-down"></i></b></a>
+                <div class="menu-con">
+                    <ul class="menu-sp">
+                        <li>
+                            <a href=""><b>Phụ kiện chơi game</b></a>
+                            <ul class="sub-menu">
+                                <li><a href="tatcasanpham.html"><i class="fas fa-angle-double-right"></i> Tất Cả Sản Phẩm</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Tay Cầm(GamePad)</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Phụ Kiện Cho Tay Cầm</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Cáp/ Adapter Chuyển</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Bảo Vệ Màn Hình</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Đế/ Tản Nhiệt/ Sạc</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Chắn Bụi/ Vệ Sinh</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Skins</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><b>Linh kiện sửa chữa</b></a>
+                            <ul class="sub-menu">
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Vỏ Ngoài</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Dây Cáp</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Màn Hình</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Pin</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Khác</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><b>Phụ kiện máy tính</b></a>
+                            <ul class="sub-menu">
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Hộp Đựng Ổ Cứng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><b>Đồ chơi theo game</b></a>
+                            <ul class="sub-menu">
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Móc Khóa</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Dây Treo Cổ</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Mô Hình</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="active"><a href="dichvu.html"><b><i class="fas fa-tools"></i> Dịch vụ</b></a></li>
+            <li class="active"><a href="thanhtoan.html"><b><i class="fas fa-cash-register"></i> Thanh toán</b></a></li>
+            <li class="active"><a href="lienhe.html"><b><i class="fas fa-id-card-alt"></i> Liên hệ</b></a></li>
+            <li class="active" style="background: #5680E9;"><a href="giohang.html"><b><i class="fas fa-shopping-cart"></i> Giỏ hàng</b></a></li>
+        </ul>
+    </div>
+
+    <!-- đặt hàng -->
+    <section>
+        <div class="cart-item">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th colspan="3">Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng Tiền</th>
+                    </tr>
+                </thead>
+                <tbody id="listCart">
+
+
+
+                </tbody>
+            </table>
+            <div class="tongtien">
+                <span>Tổng Tiền:</span>
+                <span id="spTong"></span>
+            </div>
+            <div class="abc">
+                <button onclick="updateCart()">CẬP NHẬT GIỞ HÀNG</button>
+                <button onclick="mua()">THANH TOÁN</button>
+            </div>
+        </div>
+    </section>
+    <!-- Phầm CUối -->
+    <div class="fotter">
+        <div class="row">
+            <div class="cols">
+                <div class="contact">
+                    <h3>LIÊN HỆ</h3>
+                </div>
+                <div class="cols_1">
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Địa chỉ:Nhân hòa- Mỹ hòa- Hưng yên</li>
+                        <li><i class="fas fa-phone"></i> Số điện thoại:0379796089</li>
+                        <li><i class="fas fa-envelope"></i> Email: <br> truongtuananh@gmai.com</li>
+                        <li><i class="fas fa-globe"></i> Website: <br> shopphukien@gmail.com</li>
+                        <li>
+                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-google-plus-square"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cols">
+                <div class="contact">
+                    <h3>CÁC THÔNG TIN </h3>
+                </div>
+                <div class="cols_2">
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Chính sách vận chuyển</li>
+                        <li><i class="fas fa-arrow-right"></i> Dịch vụ thanh linh kiện, sửa chữa</li>
+                        <li><i class="fas fa-arrow-right"></i> Giới thiệu</li>
+                        <li><i class="fas fa-arrow-right"></i> Phương thức thanh toán</li>
+                        <li><i class="fas fa-arrow-right"></i> Chính sách bảo mật thông tin</li>
+                        <li><i class="fas fa-arrow-right"></i> Liên hệ</li>
+                        <li><i class="fas fa-arrow-right"></i> Theo dõi đơn hàng</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cols">
+                <div class="contact">
+                    <h3>DANH MỤC SẢN PHẨM</h3>
+                </div>
+                <div class="cols_3">
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Nintendo Switch</li>
+                        <li><i class="fas fa-arrow-right"></i> PlayStation 5</li>
+                        <li><i class="fas fa-arrow-right"></i> Xbox Series</li>
+                        <li><i class="fas fa-arrow-right"></i> PlayStation 4</li>
+                        <li><i class="fas fa-arrow-right"></i> PlayStation 3</li>
+                        <li><i class="fas fa-arrow-right"></i> Xbox One</li>
+                        <li><i class="fas fa-arrow-right"></i> PC (Window)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thanh Toán -->
+    <div class="card">
+        <img src="img/payment 1.png" alt="">
+    </div>
+
+    <!-- js -->
+    <script>
+        var list = JSON.parse(localStorage.getItem('cart'));
+
+        function LoadData() {
+            var str = "";
+            var n = 0;
+            var t = 0;
+            for (x of list) {
+                t += x.price * x.quantity;
+                str += `<tr>
+                        <td><i onclick="Xoa(` + x.id + `)" class="fa fa-times-circle" style="font-size:30px;color:red;cursor: pointer;"></i></td>
+                        <td><img style="width: 150px; height: 150px;" src="` + x.image + `"> </td>
+                        <td>` + x.name + `</td>
+                        <td>` + x.price + ' ' + 'VNĐ' + `</td>
+                        <td> 
+                            <button onclick="Giam(` + x.id + `)">-</button>
+                            <input id="q_` + Number(x.id) + `" onchange="updateQuantity(` + x.id + `)" type="text" value="` + x.quantity + `" style="width: 30px;" >
+                            <button onclick="Tang(` + x.id + `)">+</button>
+                        </td>
+                        <td>` + (x.price * x.quantity) + ' ' + 'VNĐ' + `</td>
+                    </tr>
+                 `;
+            }
+            document.getElementById("listCart").innerHTML = str;
+            $("#spTong").text(t + ' ' + 'VNĐ');
+        }
+
+        function Xoa(id) {
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0) {
+                list.splice(index, 1);
+            }
+            LoadData();
+        }
+
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(list));
+            alert("Đã cập nhật thông tin giở hàng thành công");
+        }
+
+        function Tang(id) {
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0) {
+                list[index].quantity += 1;
+            }
+            LoadData();
+        }
+
+        function Giam(id) {
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0 && list[index].quantity >= 1) {
+                list[index].quantity -= 1;
+            }
+            LoadData();
+        }
+
+        function updateQuantity(id) {
+            var quantity = Number($('#q_' + id).val());
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0 && list[index].quantity >= 1) {
+                list[index].quantity = quantity;
+            }
+            LoadData();
+        }
+        LoadData();
+    </script>
+
+
+    <div class="all" id="all">
+        <div class="title-1">
+            <span onclick="an()"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="row-1">
+            <div class="thongtin">
+                <div class="container">
+                    <form action="" id="form-1">
+                        <div class="row-1">
+                            <div class="cols-1">
+                                <div>
+                                    <h3>Thông Tin Khách Hàng</h3>
+                                </div>
+                                <div class="from_cols form-group">
+                                    <label for="fname"><i class="fa fa-user"></i><span>Họ Và Tên</span></label>
+                                    <input type="text" id="fullname" name="fullname" placeholder="VD: Trương Tuấn Anh" class="auth-form__input">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="from_cols form-group">
+                                    <label for="email"><i class="fa fa-envelope"></i><span>Email</span></label>
+                                    <input type="text" id="email" name="email" placeholder="abc@example.com" class="auth-form__input">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="from_cols form-group">
+                                    <label for="adr"><i class="fas fa-map-marker-alt"></i><span>Địa Chỉ</span></label>
+                                    <input type="text" id="address" name="address" placeholder="Thôn/Xã/Huyện/Tỉnh/TP" class="auth-form__input">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="from_cols form-group">
+                                    <label for="city"><i class="fas fa-phone-volume"></i><span>Số Điện Thoại</span></label>
+                                    <input type="text" id="phone" name="phone" placeholder="SDT" class="auth-form__input">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="from_cols">
+                                    <label for="">Ghi Chú Đơn Hàng</label>
+                                    <textarea name="" id="" cols="0" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="cols-2">
+                <div class="container">
+                    <h4>Sản Phẩm </h4>
+                    <div id="spham">
+
+                    </div>
+                    <!-- <div>
+                        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                    </div> -->
+                    <hr>
+                    <div>
+                        <p>Tổng Tiền<span class="price" style="color:black"><b id="tt"></b></span></p>
+                    </div>
+                    <div style="font-weight: 600;">
+                        <div>
+                            <input type="radio" name="thanhtoan"> Chuyển khoản ngân hàng trực tiếp
+                        </div>
+                        <div style="padding-top: 10px;">
+                            <input type="radio" name="thanhtoan"> Thanh toán khi giao hàng
+                        </div>
+                    </div>
+                    <input type="submit" value="Đặt Hàng" class="btn btn__print">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function mua() {
+                document.getElementById('all').style.display = 'block';
+
+            }
+
+
+            function an() {
+                document.getElementById('all').style.display = 'none';
+            }
+
+
+            function LoadData_1() {
+                var str = "";
+                var t = 0;
+                for (x of list) {
+                    t += x.price * x.quantity;
+                    str += `    
+                    <div>
+                        <p><a href="#"></a>` + x.name + `<span class="price">` + x.price + `</span></p>
+                    </div>
+                `;
+                }
+                $('#spham').html(str);
+                $('#tt').html(t);
+            }
+            LoadData_1();
+        </script>
+    </div>
+</body>
+
+</html>

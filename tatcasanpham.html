@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất Cả Sản Phẩm </title>
+    <link rel="stylesheet" href="css/tatcasanpham.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="header_search">
+            <input type="text" id="myInput" placeholder="Tìm Kiếm...." onclick="search()">
+        </div>
+        <div class="header_account">
+            <div>
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <a href="taikhoan.html"><span>Tài Khoản</span></a>
+            </div>
+        </div>
+        <script>
+            function search() {
+                var input, filter, div, a, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                div = document.getElementById("product_category");
+                a = div.getElementsByClassName("product_category-cols");
+                for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        a[i].style.display = "";
+                    } else {
+                        a[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </div>
+    <div class="menu">
+        <div class="thanhcongcu">
+            <i onclick="myFunction()" class="fa fa-bars" style="color:white;"></i>
+        </div>
+        <ul>
+            <li class="active" id="trangchu"><a href="index.html"><b><i class="fa fa-home"></i>Trang chủ</b></a></li>
+            <li class="active" id="cham"><a href="#"><b><i class="fas fa-boxes"></i> Danh mục <i
+                            class="fas fa-angle-down"></i></b></a>
+                <div class="menu-con">
+                    <ul class="menu-sp">
+                        <li>
+                            <a href=""><b>Phụ kiện chơi game</b></a>
+                            <ul class="sub-menu">
+                                <li><a href="tatcasanpham.html"><i class="fas fa-angle-double-right"></i> Tất Cả Sản Phẩm</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Tay Cầm(GamePad)</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Phụ Kiện Cho Tay Cầm</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Cáp/ Adapter Chuyển</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Bảo Vệ Màn Hình</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Đế/ Tản Nhiệt/ Sạc</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Chắn Bụi/ Vệ Sinh</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Skins</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><b>Linh kiện sửa chữa</b></a>
+                            <ul class="sub-menu">
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Vỏ Ngoài</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Dây Cáp</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Màn Hình</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Pin</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Khác</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><b>Phụ kiện máy tính</b></a>
+                            <ul class="sub-menu">
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Hộp Đựng Ổ Cứng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><b>Đồ chơi theo game</b></a>
+                            <ul class="sub-menu">
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Móc Khóa</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Dây Treo Cổ</a></li>
+                                <li><a href=""><i class="fas fa-angle-double-right"></i> Mô Hình</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="active"><a href="dichvu.html"><b><i class="fas fa-tools"></i> Dịch vụ</b></a></li>
+            <li class="active"><a href="thanhtoan.html"><b><i class="fas fa-cash-register"></i> Thanh toán</b></a></li>
+            <li class="active"><a href="lienhe.html"><b><i class="fas fa-id-card-alt"></i> Liên hệ</b></a></li>
+            <li class="active"><a href="giohang.html"><b><i class="fas fa-shopping-cart"></i> Giỏ hàng</b></a></li>
+        </ul>
+    </div>
+    <div class="title">
+        <span>Trang Chủ > Tất Cả Sản Phẩm</span>
+    </div>
+    <div class="product">
+        <div class="product_list">
+            <div class="product_list-title">
+                <span>Danh Mục Sản Phẩm</span>
+            </div>
+            <div class="product_list-price">
+                <div class="product_list-category">Tay Cầm Chơi Game <i class="fas fa-chevron-right"></i></div>
+                <div class="product_list-category">Phụ Kiện Tai Nghe <i class="fas fa-chevron-right"></i></div>
+                <div class="product_list-category">Phụ Kiện Cho Điện Thoại <i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="product_list-title">
+                <span>Giá Sản Phẩm</span>
+            </div>
+            <div class="product_list-price">
+                <input type="radio" name="gia"> Tất Cả<br>
+                <input type="radio" name="gia"> Giá Dưới 200.000 VNĐ <br>
+                <input type="radio" name="gia"> Giá Dưới 500.000 VNĐ <br>
+                <input type="radio" name="gia"> Giá Dưới 1.000.000 VNĐ <br>
+                <input type="radio" name="gia"> Giá Trên 1.00.000 VNĐ <br>
+            </div>
+        </div>
+        <div class="product_category">
+            <div class="product_category-row" id="product_category">
+                <div class="product_category-cols">
+                    <a href="sanpham-1.html">
+                        <img id="" src="img/taycam-1.jpg" alt="">
+                        <h4 id="name">Xbox One X White</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">1.590.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="sanpham-5.html">
+                        <img id="" src="img/taycam-5.jpg" alt="">
+                        <h4 id="name">Xbox One X Blue</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">1.690.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="sanpham-6.html">
+                        <img id="" src="img/taycam-6.jpg" alt="">
+                        <h4 id="name">Xbox One X Red</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">1.790.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="sanpham-4.html">
+                        <img id="" src="img/taycam-4.jpg" alt="">
+                        <h4 id="name">Sony DualSense PS5</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">2.500.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/taycam-8.jpg" alt="">
+                        <h4 id="name">Máy Game Nintendo Switch V2 RED</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">8.000.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/phukien-1.jpg" alt="">
+                        <h4 id="name">Túi Bọc Analog Cho Nintendo Switch V2 </h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">120.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/taycam-9.jpg" alt="">
+                        <h4 id="name">Dock Sạc Tay Cầm PS5 Sony DualSense 5</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">199.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/taycam-2.jpg" alt="">
+                        <h4 id="name">Tay Cầm Chơi Game GameSir T4W </h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">480.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/taycam-3.jpg" alt="">
+                        <h4 id="name">Xbox One S</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">1.790.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/tainghe-5.jpg" alt="">
+                        <h4 id="name">Tai nghe DareU VH350SE - Jack</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">320.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/tainghe-6.jpg" alt="">
+                        <h4 id="name">Tai nghe G-Net H99</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">220.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/tainghe-7.jpg" alt="">
+                        <h4 id="name">Tai Nghe Wangming WM8900 Trắng</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">250.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="tainghe-1.html">
+                        <img id="" src="img/tainghe1.webp" alt="">
+                        <h4 id="name">Tai Nghe SteelSeries Arctis</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">590.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="tainghe-2.html">
+                        <img id="" src="img/tainghe2.webp" alt="">
+                        <h4 id="name">Tai Nghe Zidli ZH 7RB</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">780.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="tainghe-3.html">
+                        <img id="" src="img/tainghe3.webp" alt="">
+                        <h4 id="name">Tai Nghe DAREU EH469 7.1</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">790.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/dienthoai-1.jpg" alt="">
+                        <h4 id="name">Tay cầm chơi game PUBG(Điện Thoại)</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">190.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/dienthoai-2.jpg" alt="">
+                        <h4 id="name">Chơi game điện thoại Gen Game S7</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">290.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+                <div class="product_category-cols">
+                    <a href="#">
+                        <img id="" src="img/dt-3.jpg" alt="">
+                        <h4 id="name">Găng Ngón Tay</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p id="gia">80.000 VNĐ</p>
+                    </a>
+                    <div class="gio">
+                        <button>Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-btn">
+        <span style="color: white; background: black;">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span style="border: none;">.....</span>
+        <span>13</span>
+        <span>Trang Cuối</span>
+    </div>
+
+    <!-- Phầm CUối -->
+    <div class="fotter">
+        <div class="row">
+            <div class="cols">
+                <div class="contact">
+                    <h3>LIÊN HỆ</h3>
+                </div>
+                <div class="cols_1">
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Địa chỉ:Nhân hòa- Mỹ hòa- Hưng yên</li>
+                        <li><i class="fas fa-phone"></i> Số điện thoại:0379796089</li>
+                        <li><i class="fas fa-envelope"></i> Email: <br> truongtuananh@gmai.com</li>
+                        <li><i class="fas fa-globe"></i> Website: <br> shopphukien@gmail.com</li>
+                        <li>
+                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-google-plus-square"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cols">
+                <div class="contact">
+                    <h3>CÁC THÔNG TIN </h3>
+                </div>
+                <div class="cols_2">
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Chính sách vận chuyển</li>
+                        <li><i class="fas fa-arrow-right"></i> Dịch vụ thanh linh kiện, sửa chữa</li>
+                        <li><i class="fas fa-arrow-right"></i> Giới thiệu</li>
+                        <li><i class="fas fa-arrow-right"></i> Phương thức thanh toán</li>
+                        <li><i class="fas fa-arrow-right"></i> Chính sách bảo mật thông tin</li>
+                        <li><i class="fas fa-arrow-right"></i> Liên hệ</li>
+                        <li><i class="fas fa-arrow-right"></i> Theo dõi đơn hàng</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cols">
+                <div class="contact">
+                    <h3>DANH MỤC SẢN PHẨM</h3>
+                </div>
+                <div class="cols_3">
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Nintendo Switch</li>
+                        <li><i class="fas fa-arrow-right"></i> PlayStation 5</li>
+                        <li><i class="fas fa-arrow-right"></i> Xbox Series</li>
+                        <li><i class="fas fa-arrow-right"></i> PlayStation 4</li>
+                        <li><i class="fas fa-arrow-right"></i> PlayStation 3</li>
+                        <li><i class="fas fa-arrow-right"></i> Xbox One</li>
+                        <li><i class="fas fa-arrow-right"></i> PC (Window)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thanh Toán -->
+    <div class="card">
+        <img src="img/payment 1.png" alt="">
+    </div>
+
+
+</body>
+
+</html>
